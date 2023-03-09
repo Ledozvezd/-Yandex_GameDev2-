@@ -50,11 +50,12 @@ public class SLIDE : MonoBehaviour
         else
         {
             _targetVelocity = Vector2.zero;
+            _speed = 0;
         }
 
         if (Input.GetKeyDown(KeyCode.Space)) 
         {
-            _velocity.y = 5;
+            _velocity.y = 10;
         }
         
     }
