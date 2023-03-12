@@ -1,16 +1,11 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 
-namespace Pockets
+namespace CoinModel
 {
-    public class Pocket : MonoBehaviour
+    public class CoinModels
     {
         public int amount;
-
-        private void Awake()
-        {
-            amount = PlayerPrefs.GetInt("Coins", 0);
-        }
 
         public bool TryDiscard(int price)
         {
@@ -18,6 +13,10 @@ namespace Pockets
                 return false;
             amount -= price;
             return true;
+        }
+        private void Awake()
+        {
+            amount = PlayerPrefs.GetInt("Coins", 0);
         }
     }
 }
